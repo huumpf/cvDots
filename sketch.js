@@ -11,14 +11,17 @@ function setup() {
 
 function draw() {
 
-  fill(51, 153, 255);
-
   for (let i = 0; i < DOT_COUNT; i++) {
     let x = random(0, width);
     let y = random(0, height);
 
-    rect(x, y, size, size);
+    if (i == 0) {
+      fill(51, 153, 255);
+    } else {
+      fill(0);
+    }
 
-    fill(0, 40);
+    rect(x, y, size, size);
+    
   }
 }
